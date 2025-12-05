@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>検索結果画面</title>
+   
+    <link rel="stylesheet"href="/css/result.css">
+    
+</head>
+<body>
+	<h1>[検索結果画面]</h1>
+
+	<div class="searchTitle">
+		<span th:text="${searchWord}"></span>
+		<span>の検索結果を表示します</span>
+	</div>
+
+  
+    <div th:each="foodName:${foodNameList}" class="result-container">
+		<span>食品名:</span>
+	   	<span th:text="${foodName}"></span>
+	</div>
+
+</body>
+
+</html>
